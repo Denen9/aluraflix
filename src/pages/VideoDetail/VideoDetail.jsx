@@ -1,36 +1,42 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import {AiOutlinePlus, AiOutlineCheck} from "react-icons/ai"
 import { Button } from '@mui/material';
+import VideosSimilares from './VideosSimilares';
 
 const VideoDetailContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 4rem;
 `;
+const IframeContainer = styled.div`
+    padding: 2rem 0 1rem 0;
 
-const VideoTitle = styled.div`
+`
+
+const VideoTitleBox = styled.div`
     display: flex;
     padding: 1rem 1rem; 
     align-items: center;
 `;
-const VideoDescriptionBox = styled.div`
 
+const VideoTitle = styled.div`
+    font-size: 1.2rem;
+    color: #fff;
+`;
+
+const VideoDescriptionBox = styled.div`
 `
 const VideoDescription = styled.p`
     font-size: 0.9rem;
     color: #b8b8b8;
     font-weight: 200;
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
     line-height: 150%;
 `;
 
 
-const IframeContainer = styled.div`
-    padding: 2rem 0;
-
-`
 const Iframe = styled.iframe`
     width: 100%;
     height: 250px;
@@ -38,14 +44,29 @@ const Iframe = styled.iframe`
 `
 
 const AddedBox = styled.div`
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
     color: #fff;
-    margin-right: 1rem;
+    margin: 0 1rem;
+    gap: 1rem;
+`
+
+const Details = styled.div`
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #747474;
+    margin: 0 1rem 1rem 1rem;;
 `
 
 const VideoDetail = ({ materias, addToMyList }) => {
   const { videoId } = useParams();
   const [addedToList, setAddedToList] = useState(false);
+
+  useEffect(() => {
+    setAddedToList(false);
+  }, [videoId]);
 
   const video = materias.find((materia) => materia.id === parseInt(videoId));
 
@@ -64,23 +85,26 @@ const VideoDetail = ({ materias, addToMyList }) => {
             allowFullScreen
         ></Iframe>
         </IframeContainer>
-        <VideoTitle>
-            <h4>{materias.nombre}</h4>
-            <AddedBox>
+        <Details>
+            <span>{video.duration}</span>
+            <span>{video.year}</span>
+            <span>{video.categoria}</span>
+            <span>{video.quality}</span>
+        </Details>
+        <VideoTitleBox>
+            <VideoTitle>{video.nombre}</VideoTitle>
+        </VideoTitleBox>
+        <VideoDescriptionBox>
+            <VideoDescription>{video.info}</VideoDescription>
+        </VideoDescriptionBox>
+        <AddedBox>
             {!addedToList && (
                 <AiOutlinePlus onClick={handleAddToList}></AiOutlinePlus>
             )}
             {addedToList && <AiOutlineCheck></AiOutlineCheck>}
-            </AddedBox>
-            <Button variant="outlined" size="small">VER LISTA</Button>
-        </VideoTitle>
-       
-        <VideoDescriptionBox>
-            <VideoDescription>{video.info}</VideoDescription>
-        </VideoDescriptionBox>
-        
-      
-      
+        <Link to="/cuenta/mis-videos"><Button variant="outlined" size="small">VER LISTA</Button></Link>
+        </AddedBox>    
+        <VideosSimilares materias={materias} video={video}/>
     </VideoDetailContainer>
   );
 };

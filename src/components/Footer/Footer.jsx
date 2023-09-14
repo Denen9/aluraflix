@@ -10,6 +10,7 @@ const FooterContainer = styled.footer`
     flex-direction: column;
     padding: 2rem 2rem;
     background-color: #000;
+    
 `
 const Copyright = styled.p`
     font-size: 0.55rem;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CardBox = styled.div`
   width: 97%;
-  height: 120px;
+  height: 130px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -21,12 +21,12 @@ const CardImg = styled.img`
   object-fit: cover;
 `;
 
-const Card = ({ materia, onClick }) => {
+const Card = ({ materia, v }) => {
 
   return (
     <Link to={`/videos/${materia.id}`} >
       <CardBox>
-        <CardImg src={materia.image} alt={materia.nombre} />
+        <CardImg src={materia.image || v.image} alt={materia.nombre || v.nombre} />
       </CardBox>
     </Link>
   );

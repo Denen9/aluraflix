@@ -11,22 +11,20 @@ import js from "../../assets/images/JavaScript un lenguaje de programación.webp
 import reactjs from "../../assets/images/photo-1633356122544-f134324a6cee.jpg"
 
 
-// Define tus estilos utilizando styled-components
 const StyledSwiperContainer = styled.div`
-  /* Agrega tus estilos personalizados aquí */
   .swiper-container {
     width: 100%;
-    height: 500px; /* Ajusta la altura según tus necesidades */
+    height: 500px;
     
   }
 
   .swiper-slide {
-    background-color: #fff; /* Color de fondo de las diapositivas */
+    background-color: #fff; 
     display: flex;
     align-items: center;
     justify-content: center;
     height: 220px;
-    font-size: 24px; /* Tamaño de fuente de contenido en las diapositivas */
+    font-size: 24px; 
     color: #333;
     margin: 2rem 0;
     @media screen and (min-width: 768px){
@@ -54,7 +52,7 @@ const Title = styled.div`
   background-color: rgba(0, 0, 0, 0.829);
   color: white;
   padding: 0.5rem 1rem;
-  font-size: 18px;
+  font-size: 1.25rem;
 `;
 
 export default function MySwiperComponent() {
