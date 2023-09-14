@@ -9,12 +9,17 @@ import { AiFillCloseCircle, AiOutlineDown } from "react-icons/ai";
 
 const NavbarCategoryHeader = styled.nav`
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 0 1rem;
     .navbarCategoryNav Button{
         margin: 0.5rem 0 0.5rem 0rem;
+    }
+
+    @media screen and (min-width: 768px){
+        justify-content: flex-end;
+        padding: 0 6rem;
+
     }
     
 `

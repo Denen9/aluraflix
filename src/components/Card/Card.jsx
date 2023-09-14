@@ -12,7 +12,7 @@ const CardBox = styled.div`
   cursor: pointer;
 
   @media screen and (min-width: 1024px) {
-    height: 200px;
+    height: 150px;
   }
 `;
 

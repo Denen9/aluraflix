@@ -14,7 +14,7 @@ import reactjs from "../../assets/images/photo-1633356122544-f134324a6cee.jpg"
 const StyledSwiperContainer = styled.div`
   .swiper-container {
     width: 100%;
-    height: 500px;
+    height: 200px;
     
   }
 
@@ -28,19 +28,17 @@ const StyledSwiperContainer = styled.div`
     color: #333;
     margin: 2rem 0;
     @media screen and (min-width: 768px){
-      height: 400px;
+      height: 300px;
     }
   }
 `;
 
 const SwiperImg = styled.img`
     width: 100%;
-    height: 220px;
+    height: 100%;
     object-fit: cover;
     border: 2px solid #00BDEC;
-    @media screen and (min-width: 768px){
-      height: 400px;
-    }
+  
 `
 
 const Title = styled.div`

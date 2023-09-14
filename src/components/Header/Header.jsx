@@ -41,6 +41,7 @@ const Navbar = styled.nav`
   width: 100%;
   @media (min-width: 768px) {
     padding: 1rem 6rem;
+    justify-content: space-between;
     background-color: #000000dd;
   }
 `;

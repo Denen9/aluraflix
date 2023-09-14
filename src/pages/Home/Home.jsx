@@ -5,10 +5,7 @@ import materias from "../../data";
 import styled from "styled-components";
 
 const VideosContainer = styled.div`
-  margin: 0 auto 4rem auto;
-  @media screen and (min-width: 768px){
-    margin-top: 4rem;
-  }
+  margin: 0 auto 6rem auto;
 `
 
 
