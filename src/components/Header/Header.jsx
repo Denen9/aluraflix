@@ -104,7 +104,7 @@ const Header = ({ materias, categoriasUnicas }) => {
         <NavbarUl>
           <NavbarLi>
             <BsFillCameraVideoFill />
-            <Button variant="text">AGREGAR VIDEO</Button>
+            <Link to="/cuenta/agregar-video"><Button variant="text">AGREGAR VIDEO</Button></Link>
           </NavbarLi>
           <NavbarLi>
             <BsFillPersonFill />
@@ -112,7 +112,7 @@ const Header = ({ materias, categoriasUnicas }) => {
           </NavbarLi>
           <NavbarLi>
             <BsFillQuestionCircleFill />
-            <Button variant="text">AYUDA</Button>
+            <Link to="/ayuda"><Button variant="text">AYUDA</Button></Link>
           </NavbarLi>
         </NavbarUl>
       )}

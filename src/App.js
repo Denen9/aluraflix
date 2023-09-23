@@ -7,6 +7,8 @@ import materias from './data';
 import Footer from './components/Footer/Footer';
 import VideoDetail from './pages/VideoDetail/VideoDetail';
 import MyVideoList from './pages/MyVideoList/MyVideoList';
+import Help from './pages/Help/Help';
+import AddVideo from './pages/AddVideo/AddVideo';
 
 const obtenerCategoriasUnicas = (materias) => {
   return Array.from(new Set(materias.map((materia) => materia.categoria)));
@@ -38,6 +40,8 @@ function App() {
           <Route path="/" element={<Home materias={materias} categoriasUnicas={categoriasUnicas} />} />
           <Route path="/videos/:videoId" element={<VideoDetail materias={materias} addToMyList={addToMyList} />} />
           <Route path="/cuenta/mis-videos" element={<MyVideoList myList={myList} removeFromMyList={removeFromMyList}/>} />
+          <Route path="/ayuda" element={<Help></Help>} />
+          <Route path="/cuenta/agregar-video" element={<AddVideo materias={materias}/>} />
         </Routes>
         <Footer />
       </Router>

@@ -9,16 +9,34 @@ const VideoDetailContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 4rem;
+  @media screen and (min-width: 768px){
+    margin-top: 10rem;
+  }
 `;
 const IframeContainer = styled.div`
     padding: 2rem 0 1rem 0;
+    @media screen and (min-width: 768px){
+        padding: 0 8rem 1rem 8rem;
+    }
 
+`
+const Iframe = styled.iframe`
+    width: 100%;
+    height: 250px;
+    box-shadow: 0 0 30px blue;
+    @media screen and (min-width: 768px){
+        height: 450px;
+    }
 `
 
 const VideoTitleBox = styled.div`
     display: flex;
     padding: 1rem 1rem; 
     align-items: center;
+    @media screen and (min-width: 768px){
+    padding: 1rem 4rem; 
+
+    }   
 `;
 
 const VideoTitle = styled.div`
@@ -34,14 +52,12 @@ const VideoDescription = styled.p`
     font-weight: 200;
     padding: 0 1rem 1rem 1rem;
     line-height: 150%;
+    @media screen and (min-width: 768px){
+    padding: 0 4rem 1rem 4rem; 
+
+    }  
 `;
 
-
-const Iframe = styled.iframe`
-    width: 100%;
-    height: 250px;
-    box-shadow: 0 0 30px blue;
-`
 
 const AddedBox = styled.div`
     display: flex;
@@ -50,6 +66,9 @@ const AddedBox = styled.div`
     color: #fff;
     margin: 0 1rem;
     gap: 1rem;
+    @media screen and (min-width: 768px){
+        margin: 0 4rem 2rem 4rem;
+    }
 `
 
 const Details = styled.div`
@@ -57,7 +76,10 @@ const Details = styled.div`
     gap: 1rem;
     font-size: 0.85rem;
     color: #747474;
-    margin: 0 1rem 1rem 1rem;;
+    margin: 0 1rem 1rem 1rem;
+    @media screen and (min-width: 768px){
+        margin: 0 8rem 1rem 8rem;
+    }
 `
 
 const VideoDetail = ({ materias, addToMyList }) => {
@@ -83,7 +105,8 @@ const VideoDetail = ({ materias, addToMyList }) => {
             title={video.nombre}
             frameBorder="0"
             allowFullScreen
-        ></Iframe>
+            >         
+            </Iframe>
         </IframeContainer>
         <Details>
             <span>{video.duration}</span>

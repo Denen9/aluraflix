@@ -1,8 +1,6 @@
-import { Button } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import imagen from "../../assets/images/b3ce5648918e1ff1ad923038cfe92914.jpg";
-import video2 from "../../assets/images/pexels-cottonbro-5473969 (2160p).mp4"
+import video2 from "../../assets/images/pexels-cottonbro-5473969 (2160p).webM"
 import video1 from "../../assets/images/pexels-mikhail-nilov-7534239.webm";
 import MySwiperComponent from "../Swiper/Swiper";
 
@@ -17,7 +15,7 @@ const HeroContainer = styled.section`
 
   @media screen and (min-width: 768px){
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
     margin-top:6rem;
     width: 100%;
@@ -74,13 +72,14 @@ const HeroInfoBox = styled.div`
   display: none;
   flex-direction: column;
   width: 400px;
+  padding-bottom: 3rem;
   @media screen and (min-width: 768px){
     display: flex;
   }
 `
 
 const HeroContainerTitle = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #fff;
   display: none;
   margin-bottom: 1rem;
@@ -91,7 +90,7 @@ const HeroContainerTitle = styled.h1`
 `
 
 const HeroText = styled.p`
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 300;
   color: #aaaaaa;
   line-height: 150%;
@@ -101,8 +100,8 @@ const Hero = ({ materias }) => {
   return (
     <HeroContainer>
       <HeroInfoBox>
-        <HeroContainerTitle>Aprende a Programar desde la comodidad</HeroContainerTitle>
-        <HeroText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates illum quasi impedit magni, ut dolorum illo dolor aut ratione esse, atque molestias nostrum dicta id, eaque quas labore. Minima!</HeroText>
+        <HeroContainerTitle>Aprende a programar desde la comodidad de tu hogar.</HeroContainerTitle>
+        <HeroText>En Aluraflix, creemos en el poder de la educación en línea para capacitar a individuos de todos los niveles de experiencia en el emocionante mundo de la programación. Ya sea que seas un principiante absoluto o un profesional que busca perfeccionar sus habilidades, nuestra plataforma ofrece una amplia gama de cursos de programación diseñados para ayudarte a alcanzar tus objetivos</HeroText>
       </HeroInfoBox>
       <HeroImgBox className="HeroImgBox">
         <HeroImg src={video2} alt="imagen" autoPlay loop/>
