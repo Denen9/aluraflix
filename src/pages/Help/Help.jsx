@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AyudaSectionWrapper = styled.section`
-  /* Estilos para el contenedor principal */
   padding: 4rem 2rem;
   @media screen and (min-width: 768px){
     padding: 10rem 6rem 4rem 6rem;
@@ -11,7 +10,6 @@ const AyudaSectionWrapper = styled.section`
 `;
 
 const Title = styled.h2`
-  /* Estilos para el título principal */
     font-size: 2rem;
     color: #d1d1d1;
     margin-bottom: 20px;

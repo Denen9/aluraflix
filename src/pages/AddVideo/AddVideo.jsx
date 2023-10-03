@@ -20,16 +20,16 @@ const StyledTextField = styled(TextField)`
   margin: 10px;
   color: red;
   & .MuiInputLabel-root {
-    color: white; /* Cambia el color del label a blanco */
+    color: white; 
   }
 
   & .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-    border-color: blue; /* Cambia el color del outline (borde exterior) a azul */
+    border-color: blue; 
   }
 
-  /* Cambia el color del outline cuando está enfocado */
+  
   & .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: green; /* Cambia el color del outline cuando está enfocado a verde */
+    border-color: green;
   }
 
 `;
